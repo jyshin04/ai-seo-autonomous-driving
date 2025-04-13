@@ -27,7 +27,7 @@ By **quantifying** these mentions and sentiment trends, I demonstrate how LLM-ba
 
 This project combines **structured** (ranked lists) and **unstructured** (long-form text) outputs from **OpenAI GPT-4** and **Anthropic Claude** to quantitatively evaluate each company's brand perception in AI-driven “search.” The following sections outline the key workflows and scripts used.
 
-### Data Collection & Preprocessing
+#### Data Collection & Preprocessing
 
 * **LLM Data Gathering**
   OpenAI GPT-4 (Chat Completions API) and Anthropic Claude (web interface) were prompted with multiple queries across categories such as safety, technology, and pricing.
@@ -35,13 +35,13 @@ This project combines **structured** (ranked lists) and **unstructured** (long-f
   * `ranking-analysis.py`: Reads `ranked_combined.csv` into a Pandas DataFrame, parses JSON-like rank entries, and applies a weighted scoring system (e.g., `chatgpt_weight = 0.8`, `claude_weight = 0.2`) to reflect relative confidence. The script then outputs aggregated category- and service-term scores.
   * `long-response-analysis.py`: Loads `long_response_combined.csv`, removes URLs, punctuation, and stopwords (using Regex and TextBlob), and organizes the cleaned corpus for sentiment and keyword analysis.
 
-### Analysis & Visualization
+#### Analysis & Visualization
 
 * **Rankings & Scores**: Raw 1–5 rankings are converted into numeric point values (1st = 5 points, 2nd = 4, etc.) in `ranking-analysis.py`. These are combined into a **Combined_WeightedScore** to show how often each brand leads in various categories.
 * **Sentiment & Keyword Frequency**: `long-response-analysis.py` applies TextBlob to compute a polarity score (−1.0 to +1.0) for each LLM response. It also uses CountVectorizer to identify the most frequent words, revealing brand-specific language once common terms like “safety” are filtered out.
 * **Visual Outputs**: `ranking-visualization.py` generates radar, pie, and bar charts illustrating company performance and overall “dominance” across categories. Word clouds, created in `long-response-analysis.py`, give a quick snapshot of recurring themes in each brand’s descriptions.
 
-### Tools & Technologies
+#### Tools & Technologies
 
 - **Python & Pandas**: Data ingestion, cleaning, aggregation
 - **Regex**: Basic text preprocessing
@@ -58,7 +58,14 @@ This project combines **structured** (ranked lists) and **unstructured** (long-f
 
 This research employs a structured prompting methodology to analyze how LLMs portray robotaxi companies across key consumer decision factors. The framework balances consistency and variation to provide comparable data points while exploring different dimensions of perception.
 
-<pre class="font-styrene border-border-100/50 overflow-x-scroll w-full rounded border-[0.5px] shadow-[0_2px_12px_hsl(var(--always-black)/5%)]"><table class="bg-bg-100 min-w-full border-separate border-spacing-0 text-sm leading-[1.88888] whitespace-normal"><thead class="border-b-border-100/50 border-b-[0.5px] text-left"><tr class="[tbody>&]:odd:bg-bg-500/10"><th class="text-text-000 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] font-400 px-2 [&:not(:first-child)]:border-l-[0.5px]">Category</th><th class="text-text-000 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] font-400 px-2 [&:not(:first-child)]:border-l-[0.5px]">Focus Area</th><th class="text-text-000 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] font-400 px-2 [&:not(:first-child)]:border-l-[0.5px]">Example Prompt</th></tr></thead><tbody><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>General</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Overall market position</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Rank the top 5 robotaxi companies in the US today."</td></tr><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>Safety</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Risk assessment & protection</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Which robotaxi companies are considered the safest in the industry?"</td></tr><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>Technology</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Innovation & technical capability</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Which robotaxi companies have the most advanced self-driving technology?"</td></tr><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>Availability</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Geographic coverage & access</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Which robotaxi companies have the widest operational availability in terms of cities and regions?"</td></tr><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>Service</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Customer experience</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Which robotaxi companies offer the best overall customer service experience?"</td></tr><tr class="[tbody>&]:odd:bg-bg-500/10"><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]"><strong>Pricing</strong></td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">Cost & value</td><td class="border-t-border-100/50 [&:not(:first-child)]:-x-[hsla(var(--border-100) / 0.5)] border-t-[0.5px] px-2 [&:not(:first-child)]:border-l-[0.5px]">"Which robotaxi companies offer the most competitive pricing for customers?"</td></tr></tbody></table></pre>
+| **Prompt Group** | **Focus Area**              | **Example Prompt**                                                                            |
+| ---------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **General**      | Perception in the US & current    | "Rank the top 5 robotaxi companies in the US today."                                                |
+| **Safety**       | Risk assessment & protection      | "Which robotaxi companies are considered the safest in the industry?"                               |
+| **Technology**   | Innovation & technical capability | "Which robotaxi companies have the most advanced self-driving technology?"                          |
+| **Availability** | Geographic coverage & access      | "Which robotaxi companies have the widest operational availability in terms of cities and regions?" |
+| **Service**      | Customer experience               | "Which robotaxi companies offer the best overall customer service experience?"                      |
+| **Pricing**      | Cost & value                      | "Which robotaxi companies offer the most competitive pricing for customers?"                        |
 
 1. **Terminology Variation** : Each prompt is repeated using four different industry terms ("robotaxi," "self-driving car," "autonomous vehicle," "driverless car") to identify potential shifts in perception based on terminology.
 2. **Standardized Output** : All prompts request results in identical JSON format: `{1: 'Best Company Name', 2: 'Second Best Company Name', ...}` This enables direct comparison across models and eliminates formatting variations.
@@ -89,11 +96,11 @@ Each radar chart reveals how a company is positioned across multiple consumer-re
 #### 2. Keyword-Based Competitive Dominance
 
 <p align="center">
-  <img src="data/final/category/safety_dominance_pie.png" height="200"/>
-  <img src="data/final/category/technology_dominance_pie.png" height="200"/>
-  <img src="data/final/category/pricing_dominance_pie.png" height="200"/>
-  <img src="data/final/category/availability_dominance_pie.png" height="200"/>
-  <img src="data/final/category/service_dominance_pie.png" height="200"/>
+  <img src="data/final/category/safety_dominance_pie.png" height="220"/>
+  <img src="data/final/category/technology_dominance_pie.png" height="220"/>
+  <img src="data/final/category/pricing_dominance_pie.png" height="220"/>
+  <img src="data/final/category/availability_dominance_pie.png" height="220"/>
+  <img src="data/final/category/service_dominance_pie.png" height="220"/>
 </p>
 
 **Observations:**
@@ -146,8 +153,8 @@ Each prompt is submitted to **both ChatGPT (GPT-4)** and **Claude**, using the s
 #### 1. Sentiment Analysis: Emotional Tone vs. Perceived Leadership
 
 <p align="center">
-  <img src="data/final/sentiment/sentiment_bar_chart.png" height="250"/>
-  <img src="data/final/sentiment/sentiment_company_by_model_chart.png" height="250"/>
+  <img src="data/final/sentiment/sentiment_bar_chart.png" height="220"/>
+  <img src="data/final/sentiment/sentiment_company_by_model_chart.png" height="220"/>
 </p>
 
 Using **Textblob**, I labeled the **positive sentiment score** of long-form, free-text LLM responses and calculated the average. Interestingly, **Waymo** scored 0.10 (scale 0–1), while **Tesla** and **Cruised** scored 0.14 and 0.12, respectively.
@@ -159,10 +166,10 @@ Using **Textblob**, I labeled the **positive sentiment score** of long-form, fre
 After filtering out dominant, overrepresented keywords like “safety” and “technology”, we identified the secondary keywords that uniquely associate with each company — highlighting how LLMs frame each brand at a narrative level:
 
 <p align="center">
-  <img src="data/final/wordcloud/wordcloud_waymo.png" height="250"/>
-  <img src="data/final/wordcloud/wordcloud_tesla.png" height="250"/>
-  <img src="data/final/wordcloud/wordcloud_cruise.png" height="250"/>
-  <img src="data/final/wordcloud/wordcloud_zoox.png" height="250"/>
+  <img src="data/final/wordcloud/wordcloud_waymo.png" height="200"/>
+  <img src="data/final/wordcloud/wordcloud_tesla.png" height="200"/>
+  <img src="data/final/wordcloud/wordcloud_cruise.png" height="200"/>
+  <img src="data/final/wordcloud/wordcloud_zoox.png" height="200"/>
 </p>
 
 ##### Company-Specific Keyword Signals:

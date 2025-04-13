@@ -1,0 +1,79 @@
+Category,Company,ChatGPT_WeightedScore,Claude_WeightedScore,Combined_WeightedScore
+General,Motional,6,2,5.200000000000001
+General,Cruise,16,16,16.0
+General,Tesla,6,9,6.6000000000000005
+General,Aurora Innovation,3,0,2.4000000000000004
+General,Waymo,20,20,20.0
+General,Aurora,5,4,4.8
+General,Zoox,3,9,4.2
+General,Argo AI,1,0,0.8
+Safety,Waymo,40,40,40.0
+Safety,Aurora,17,16,16.8
+Safety,Motional,12,24,14.400000000000002
+Safety,Cruise,32,1,25.8
+Safety,Zoox,8,32,12.8
+Safety,Argo AI,11,1,9.0
+Safety,Tesla,0,3,0.6000000000000001
+Safety,Mobileye,0,3,0.6000000000000001
+Technology,Baidu Apollo,4,8,4.800000000000001
+Technology,Motional,8,2,6.800000000000001
+Technology,Cruise,29,26,28.400000000000002
+Technology,Tesla,21,24,21.6
+Technology,Aurora Innovation,2,0,1.6
+Technology,Aptiv,2,0,1.6
+Technology,Apple,1,0,0.8
+Technology,Mercedes-Benz Drive Pilot,0,2,0.4
+Technology,Waymo,40,40,40.0
+Technology,Pony.ai,1,0,0.8
+Technology,Aurora,8,0,6.4
+Technology,Argo AI,2,0,1.6
+Technology,Mobileye,2,10,3.6
+Technology,Zoox,0,8,1.6
+Availability,Baidu Apollo,2,20,5.6
+Availability,Apollo,1,0,0.8
+Availability,Baidu,6,0,4.800000000000001
+Availability,Motional,20,0,16.0
+Availability,Cruise,32,8,27.200000000000003
+Availability,Tesla,0,25,5.0
+Availability,BMW,0,2,0.4
+Availability,Waymo,40,35,39.0
+Availability,Aurora,5,0,4.0
+Availability,Pony.ai,4,0,3.2
+Availability,Zoox,7,0,5.6000000000000005
+Availability,Argo AI,1,0,0.8
+Availability,Uber/Motional,0,3,0.6000000000000001
+Availability,DiDi,0,7,1.4000000000000001
+Availability,General Motors,0,7,1.4000000000000001
+Availability,Mercedes-Benz,0,12,2.4000000000000004
+Availability,AutoX,2,0,1.6
+Availability,GM Super Cruise,0,1,0.2
+Service,Baidu Apollo,1,0,0.8
+Service,Motional,6,3,5.4
+Service,Cruise,31,26,30.0
+Service,Tesla,13,22,14.8
+Service,Mercedes-Benz Drive Pilot,0,1,0.2
+Service,DiDi Autonomous,0,2,0.4
+Service,Waymo,40,39,39.8
+Service,Aurora,8,0,6.4
+Service,Pony.ai,3,4,3.2
+Service,Zoox,14,15,14.200000000000001
+Service,Volvo,0,1,0.2
+Service,Nuro,4,0,3.2
+Service,Mercedes-Benz,0,6,1.2000000000000002
+Service,BMW,0,1,0.2
+Pricing,Baidu Apollo,3,0,2.4000000000000004
+Pricing,Nio,0,4,0.8
+Pricing,Motional,14,5,12.200000000000001
+Pricing,Cruise,35,1,28.2
+Pricing,Tesla,9,18,10.8
+Pricing,Aptiv,2,0,1.6
+Pricing,Geely,0,2,0.4
+Pricing,DiDi Autonomous,0,20,4.0
+Pricing,Waymo,37,13,32.2
+Pricing,BYD,0,18,3.6
+Pricing,Aurora,5,0,4.0
+Pricing,Chery,0,6,1.2000000000000002
+Pricing,Xpeng,0,11,2.2
+Pricing,Zoox,10,14,10.8
+Pricing,Nuro,3,0,2.4000000000000004
+Pricing,AutoX,2,8,3.2

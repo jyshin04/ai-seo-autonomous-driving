@@ -1,0 +1,77 @@
+Service Term,Company,ChatGPT_WeightedScore,Claude_WeightedScore,Combined_WeightedScore
+robotaxi,Baidu Apollo,7,12,8.0
+robotaxi,Apollo,1,0,0.8
+robotaxi,Baidu,3,0,2.4000000000000004
+robotaxi,Motional,26,15,23.8
+robotaxi,Cruise,46,27,42.2
+robotaxi,Aptiv,2,0,1.6
+robotaxi,DiDi Autonomous,0,11,2.2
+robotaxi,Waymo,53,52,52.800000000000004
+robotaxi,Aurora,6,5,5.800000000000001
+robotaxi,Pony.ai,6,2,5.200000000000001
+robotaxi,Zoox,11,31,15.0
+robotaxi,Argo AI,0,1,0.2
+robotaxi,Uber/Motional,0,2,0.4
+robotaxi,DiDi,0,5,1.0
+robotaxi,AutoX,4,2,3.6
+self-driving car,Motional,8,6,7.6000000000000005
+self-driving car,Zoox,7,12,8.0
+self-driving car,Argo AI,6,0,4.800000000000001
+self-driving car,Nio,0,2,0.4
+self-driving car,Tesla,22,40,25.6
+self-driving car,Mercedes-Benz Drive Pilot,0,2,0.4
+self-driving car,Waymo,55,42,52.4
+self-driving car,Chery,0,5,1.0
+self-driving car,Mobileye,0,3,0.6000000000000001
+self-driving car,Mercedes-Benz,0,8,1.6
+self-driving car,Aptiv,2,0,1.6
+self-driving car,BYD,0,9,1.8
+self-driving car,Aurora,18,5,15.4
+self-driving car,Xpeng,0,5,1.0
+self-driving car,Nuro,2,0,1.6
+self-driving car,Baidu Apollo,1,5,1.8
+self-driving car,Cruise,43,15,37.4
+self-driving car,Apple,1,0,0.8
+self-driving car,Pony.ai,0,1,0.2
+self-driving car,General Motors,0,2,0.4
+self-driving car,BMW,0,3,0.6000000000000001
+autonomous vehicle,Baidu,3,0,2.4000000000000004
+autonomous vehicle,Motional,15,6,13.2
+autonomous vehicle,Aurora Innovation,5,0,4.0
+autonomous vehicle,Argo AI,5,0,4.0
+autonomous vehicle,Zoox,12,12,12.000000000000002
+autonomous vehicle,Nio,0,2,0.4
+autonomous vehicle,Tesla,11,39,16.6
+autonomous vehicle,Mercedes-Benz Drive Pilot,0,1,0.2
+autonomous vehicle,Waymo,54,43,51.800000000000004
+autonomous vehicle,Chery,0,1,0.2
+autonomous vehicle,Mobileye,2,5,2.6
+autonomous vehicle,Volvo,0,1,0.2
+autonomous vehicle,Mercedes-Benz,0,7,1.4000000000000001
+autonomous vehicle,DiDi Autonomous,0,1,0.2
+autonomous vehicle,BYD,0,9,1.8
+autonomous vehicle,Aurora,8,5,7.4
+autonomous vehicle,Xpeng,0,6,1.2000000000000002
+autonomous vehicle,Nuro,5,0,4.0
+autonomous vehicle,Baidu Apollo,0,6,1.2000000000000002
+autonomous vehicle,Cruise,43,15,37.4
+autonomous vehicle,Geely,0,2,0.4
+autonomous vehicle,Pony.ai,2,0,1.6
+autonomous vehicle,General Motors,0,3,0.6000000000000001
+autonomous vehicle,GM Super Cruise,0,1,0.2
+driverless car,Baidu Apollo,2,5,2.6
+driverless car,Motional,17,9,15.400000000000002
+driverless car,Cruise,43,21,38.6
+driverless car,Tesla,16,22,17.200000000000003
+driverless car,DiDi Autonomous,0,10,2.0
+driverless car,Waymo,55,50,54.0
+driverless car,Aurora,16,5,13.8
+driverless car,Pony.ai,0,1,0.2
+driverless car,Argo AI,4,0,3.2
+driverless car,Zoox,12,23,14.200000000000003
+driverless car,Mobileye,0,5,1.0
+driverless car,Uber/Motional,0,1,0.2
+driverless car,DiDi,0,2,0.4
+driverless car,General Motors,0,2,0.4
+driverless car,Mercedes-Benz,0,3,0.6000000000000001
+driverless car,AutoX,0,6,1.2000000000000002
